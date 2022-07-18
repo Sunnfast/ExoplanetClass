@@ -108,4 +108,5 @@ int main() {
   Cygni.SetStellarMagnitude(6.215);
   Cygni.SetDiscoDate(1996);
 
+
 }
