@@ -109,4 +109,31 @@ int main() {
   Cygni.SetDiscoDate(1996);
 
 
+  // vector exercise addition
+  // Task: Display the data for all exoplanets in the list, then remove the last exoplanet from the list and display the modified list
+
+
+  vector<Exoplanet> Exoplanet_vector{ ComaeBerenices, UrsaeMinoris, Andromedae, Herculis, Cygni };
+
+  vector<Exoplanet>::iterator iter;
+
+  // Display the data for all exoplanets in the list, then remove the first or last exoplanet from the list and display the modified list
+
+  cout << "\n" << "Initial Vector: " << "\n" << "\n";
+
+
+  for (iter = Exoplanet_vector.begin(); iter != Exoplanet_vector.end(); ++iter) {
+      cout << "Name: " << (*iter).GetName() << "\n" << "Lightyears from Earth: " << (*iter).GetLightYears() << "\n" << "Planetary Mass: " << (*iter).GetPlanetMass() << " Jupiters" << "\n" << "Stellar Magnitude: " << (*iter).GetStellarMagnitude() << "\n" << "Discovery Date: " << (*iter).GetDiscoDate() << "\n" << "\n";
+  }
+
+  Exoplanet_vector.pop_back();
+
+  // display modified list
+  cout << "\n" << "Removing last exoplanet from vector..." << "\n";
+
+  cout << "\n" << "Updated Vector: " << "\n" << "\n";
+
+  for (iter = Exoplanet_vector.begin(); iter != Exoplanet_vector.end(); ++iter) {
+      cout << "Name: " << (*iter).GetName() << "\n" << "Lightyears from Earth: " << (*iter).GetLightYears() << "\n" << "Planetary Mass: " << (*iter).GetPlanetMass() << " Jupiters" << "\n" << "Stellar Magnitude: " << (*iter).GetStellarMagnitude() << "\n" << "Discovery Date: " << (*iter).GetDiscoDate() << "\n" << "\n";
+
 }
